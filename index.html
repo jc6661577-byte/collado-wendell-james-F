@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+    }
+
+    /* Navigation bar */
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 10;
+    }
+    .logo { font-size: 1.5rem; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav a { color: #fff; text-decoration: none; }
+    nav a:hover { color: #ff6b35; }
+
+    /* Hero / cover section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+                  url('your-image.jpg') center/cover,
+                  #1e293b;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.2rem; max-width: 500px; margin-bottom: 25px; }
+
+    .btn {
+      padding: 14px 32px;
+      background: #ff6b35;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .btn:hover { background: #e55a25; }
+
+    /* Footer */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+    }
+    footer a { color: #ff6b35; text-decoration: none; margin: 0 8px; }
+
+    /* Phone screens */
+    @media (max-width: 600px) {
+      nav { flex-direction: column; gap: 10px; padding: 15px; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">MyLogo</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Welcome to My Website</h1>
+    <p>I design simple, beautiful things.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </header>
+
+  <footer id="contact">
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p style="margin-top:10px;">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">GitHub</a>
+    </p>
+    <p style="margin-top:10px;">&copy; 2026 My Website</p>
+  </footer>
+
+</body>
+</html>
